@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Firebase Console Auth Panel Fix",
+    "version": "1.0.0",
+    "description": "Remove width/max-width on Firebase Console Auth panel to show full info.",
+    "permissions": [],
+    "host_permissions": [
+        "https://console.firebase.google.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://console.firebase.google.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
